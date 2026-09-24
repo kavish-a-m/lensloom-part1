@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LensLoom — a clean image discovery interface.">
+  <title>LensLoom | Image Discovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="LensLoom home">
+      <span class="brand-mark" aria-hidden="true">LL</span>
+      <span>
+        <strong>LensLoom</strong>
+        <small>Find a frame worth keeping.</small>
+      </span>
+    </a>
+    <span class="header-badge">IMAGE DISCOVERY</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">VISUAL EXPLORATION</p>
+        <h1 id="page-title">Turn a thought into a <span>visual trail.</span></h1>
+        <p class="intro">
+          Search a topic and explore a responsive collection of images. Start broad,
+          get specific, and let your curiosity choose the next frame.
+        </p>
+      </div>
+
+      <form class="search-panel" id="search-form">
+        <label for="search-input">What do you want to see?</label>
+        <div class="search-row">
+          <input
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Try “mountains”, “Tokyo”, or “coffee”"
+            autocomplete="off"
+          >
+          <button id="search-button" type="submit">Search</button>
+          <button id="clear-button" class="clear-button" type="button">Clear</button>
+        </div>
+      </form>
+
+      <div class="quick-picks" aria-label="Quick search suggestions">
+        <span class="quick-label">Quick picks</span>
+        <button type="button" class="chip">Nature</button>
+        <button type="button" class="chip">Cities</button>
+        <button type="button" class="chip">Architecture</button>
+        <button type="button" class="chip">Animals</button>
+      </div>
+    </section>
+
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-heading">
+        <div>
+          <p class="eyebrow">YOUR RESULTS</p>
+          <h2 id="results-heading">Explore the collection</h2>
+        </div>
+        <p id="result-count" class="result-count">Results will appear here</p>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">✦</div>
+        <h3>Search to see results</h3>
+        <p>Your image collection is waiting for its first idea.</p>
+      </div>
+
+      <!-- Part 2 will populate this container. Keep it empty in Part 1. -->
+      <div id="results" class="results-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>LensLoom</span>
+    <span>Part 1 · UI scaffold</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
