@@ -1,3 +1,4 @@
 # LensLoom
 
 LensLoom is a plain HTML, CSS, and JavaScript image-search interface that will let users search a topic and browse responsive image results. I chose a teal-and-coral palette to give the app a warm editorial feel instead of copying the reference's purple visual language. I also used a split hero layout with the search panel beside the headline so the primary action is immediately visible on larger screens. Quick-pick chips and a dedicated empty-state message make the first screen useful even before Part 2 adds real search behaviour.
+This interface is intentionally prepared for image-search functionality to be added in Part 2.
