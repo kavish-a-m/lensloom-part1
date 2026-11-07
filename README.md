@@ -1,3 +1,4 @@
-# LensLoom
+# Tideframe
 
-LensLoom is a plain HTML, CSS, and JavaScript image-search interface that will let users search a topic and browse responsive image results. I chose a teal-and-coral palette to give the app a warm editorial feel instead of copying the reference's purple visual language. I also used a split hero layout with the search panel beside the headline so the primary action is immediately visible on larger screens. Quick-pick chips and a dedicated empty-state message make the first screen useful even before Part 2 adds real search behaviour.
+Tideframe is an image-search app that will help people discover visuals from a simple topic search. I used a sea-glass teal and warm coral palette to give the interface a calm, editorial feel that differs from a conventional dark search page. The split hero places the search panel beside the invitation, so the action is visible immediately without interrupting the opening message. A sticky header and quick-pick topic chips give future searches a clear, easy starting point.
+

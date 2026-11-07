@@ -1,84 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LensLoom — a clean image discovery interface.">
-  <title>LensLoom | Image Discovery</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="LensLoom home">
-      <span class="brand-mark" aria-hidden="true">LL</span>
-      <span>
-        <strong>LensLoom</strong>
-        <small>Find a frame worth keeping.</small>
-      </span>
-    </a>
-    <span class="header-badge">IMAGE DISCOVERY</span>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tideframe is a calm place to begin an image search." />
+    <title>Tideframe — Find your next visual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#top" id="brand-link" aria-label="Tideframe home">tide<span>frame</span></a>
+      <p class="header-note" id="header-tagline">A horizon of images, one search away.</p>
+    </header>
 
-  <main>
-    <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy">
-        <p class="eyebrow">VISUAL EXPLORATION</p>
-        <h1 id="page-title">Turn a thought into a <span>visual trail.</span></h1>
-        <p class="intro">
-          Search a topic and explore a responsive collection of images. Start broad,
-          get specific, and let your curiosity choose the next frame.
-        </p>
-      </div>
-
-      <form class="search-panel" id="search-form">
-        <label for="search-input">What do you want to see?</label>
-        <div class="search-row">
-          <input
-            id="search-input"
-            name="query"
-            type="search"
-            placeholder="Try “mountains”, “Tokyo”, or “coffee”"
-            autocomplete="off"
-          >
-          <button id="search-button" type="submit">Search</button>
-          <button id="clear-button" class="clear-button" type="button">Clear</button>
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow" id="welcome-label">Visual discovery, at your pace</p>
+          <h1 id="page-title">Start with a spark.<br />Find the <em>view.</em></h1>
+          <p class="lede" id="page-description">Search for places, textures, ideas, and the unexpected. Your image collection will appear here when you are ready.</p>
         </div>
-      </form>
 
-      <div class="quick-picks" aria-label="Quick search suggestions">
-        <span class="quick-label">Quick picks</span>
-        <button type="button" class="chip">Nature</button>
-        <button type="button" class="chip">Cities</button>
-        <button type="button" class="chip">Architecture</button>
-        <button type="button" class="chip">Animals</button>
-      </div>
-    </section>
+        <form class="search-panel" id="search-form" role="search">
+          <label for="search-input" id="search-label">What is on your mind?</label>
+          <div class="search-row">
+            <input id="search-input" name="query" type="search" placeholder="Try “coastal mornings”" autocomplete="off" />
+            <button id="search-button" type="submit">Search <span aria-hidden="true">↗</span></button>
+          </div>
+          <button class="clear-button" id="clear-button" type="reset">Clear search</button>
+        </form>
+      </section>
 
-    <section class="results-section" aria-labelledby="results-heading">
-      <div class="results-heading">
-        <div>
-          <p class="eyebrow">YOUR RESULTS</p>
-          <h2 id="results-heading">Explore the collection</h2>
+      <section class="discovery" aria-labelledby="discovery-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="discovery-label">A small starting point</p>
+            <h2 id="discovery-title">Follow a current</h2>
+          </div>
+          <p class="result-count" id="result-count">Results will appear here</p>
         </div>
-        <p id="result-count" class="result-count">Results will appear here</p>
-      </div>
 
-      <div id="empty-state" class="empty-state">
-        <div class="empty-icon" aria-hidden="true">✦</div>
-        <h3>Search to see results</h3>
-        <p>Your image collection is waiting for its first idea.</p>
-      </div>
+        <div class="quick-picks" id="quick-picks" aria-label="Suggested search topics">
+          <button class="chip" id="chip-tidal" type="button">Tidal pools</button>
+          <button class="chip" id="chip-streetlight" type="button">Streetlight</button>
+          <button class="chip" id="chip-orchards" type="button">Orchards</button>
+          <button class="chip" id="chip-ceramics" type="button">Ceramics</button>
+        </div>
 
-      <!-- Part 2 will populate this container. Keep it empty in Part 1. -->
-      <div id="results" class="results-grid"></div>
-    </section>
-  </main>
+        <div class="empty-state" id="empty-state">
+          <span class="empty-mark" aria-hidden="true">✦</span>
+          <p>Search to see your image horizon take shape.</p>
+        </div>
+        <p class="search-status" id="search-status" role="status" aria-live="polite" hidden></p>
+        <div class="results-grid" id="results" aria-live="polite" aria-label="Image search results"></div>
+      </section>
+    </main>
 
-  <footer class="site-footer">
-    <span>LensLoom</span>
-    <span>Part 1 · UI scaffold</span>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <footer id="site-footer">Tideframe <span aria-hidden="true">·</span> made for wandering</footer>
+    <script src="script.js"></script>
+  </body>
 </html>
